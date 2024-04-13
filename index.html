@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>F-WHEAT VIEWER</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px;
+            justify-content: center;
+        }
+        .thumbnail-container {
+            width: 150px;
+        }
+        .date-label {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        .thumbnail {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+        #fullImage, #graphImage {
+            width: 100%;
+            display: none;
+            margin-top: 20px;
+        }
+        #imageDisplay {
+            display: none;
+            text-align: center;
+        }
+        #backButton {
+            display: none;
+            margin-top: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 16px;
+            line-height: 50px; /* Center the text vertically */
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>F-WHEAT VIEWER</header>
+    <div id="gallery"></div>
+    <div id="imageDisplay">
+        <button id="backButton">←</button>
+        <img id="graphImage">
+        <img id="fullImage">
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
